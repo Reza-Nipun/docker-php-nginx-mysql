@@ -26,7 +26,7 @@ jobs:
       run: |
         composer require laravel/ui
         php artisan ui react --auth
-        npm install --legacy-peer-deps
+        npm install --legacy-peer-deps && npm run build
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     - name: Create Database
