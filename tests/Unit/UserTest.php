@@ -58,4 +58,24 @@ class UserTest extends TestCase
 
         $response->assertRedirect('/home');
     }
+
+    public function test_database()
+    {
+        $this->assertDatabaseHas('users', [
+            'name' => 'Nipun'
+        ]);
+    }
+
+    public function test_database_missing()
+    {
+        $this->assertDatabaseMissing('users', [
+            'email' => 'nipunsarker56@gmail.com'
+        ]);
+    }
+
+    public function test_if_seeders_works()
+    {
+        // this command represents -> php artisan db:seed
+        $this->seed();  // Seed all seeders in the seeders folder
+    }
 }
