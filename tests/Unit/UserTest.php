@@ -17,7 +17,7 @@ class UserTest extends TestCase
     {
         $response = $this->get('/login');
 
-        $response->assertTrue(true);
+        $response->assertStatus(200);
     }
 
     public function test_user_duplication()
