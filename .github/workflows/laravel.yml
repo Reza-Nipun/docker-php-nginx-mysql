@@ -31,6 +31,7 @@ jobs:
     - name: Execute tests (Unit and Feature tests) via PHPUnit
     - name: Frontend with Auth
       run: |
+        composer require laravel/ui
         php artisan ui react --auth
         npm install && npm run dev
       env:
