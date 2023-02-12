@@ -15,7 +15,7 @@ class UserTest extends TestCase
      */
     public function test_login_form()
     {
-        $response = $this->post('/login');
+        $response = $this->get('/login');
 
         $response->assertTrue(true);
     }
