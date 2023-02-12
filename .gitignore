@@ -18,3 +18,5 @@ yarn-error.log
 /.vscode
 /docker/logs
 /docker/mysql
+/docker/.DS_Store
+.DS_Store
