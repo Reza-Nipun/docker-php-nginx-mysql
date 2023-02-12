@@ -34,4 +34,4 @@ jobs:
         DB_DATABASE: laravel_docker_app
         DB_USERNAME: root
         DB_PASSWORD: root
-      run: vendor/bin/phpunit
+      run: php artisan test
