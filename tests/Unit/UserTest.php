@@ -13,13 +13,6 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    // public function test_login_form()
-    // {
-    //     $response = $this->get('/login');
-
-    //     $response->assertStatus(200);
-    // }
-
     public function test_user_duplication()
     {
         $user1 = User::make([
