@@ -39,4 +39,16 @@ class UserTest extends TestCase
 
         $this->assertTrue(true);
     }
+
+    public function test_register_new_users()
+    {
+        $response = $this->post('/register', [
+            'name' => 'Nipun',
+            'email' => 'nipun@gmail.com',
+            'password' => 'nipun1234',
+            'password_confirmation' => 'nipun1234'
+        ]);
+
+        $response->assertRedirect('/home');
+    }
 }
